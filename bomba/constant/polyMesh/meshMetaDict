@@ -1,0 +1,148 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant/polyMesh";
+    object      meshMetaDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+surfaceFile     "geom.stl";
+
+surfaceMeta
+{
+    nPoints         2659;
+    nFacets         5042;
+    nPatches        4;
+    nFeatureEdges   0;
+    patches
+    {
+        AMI
+        {
+            type            empty;
+            nFacets         1656;
+        }
+        pump
+        {
+            type            empty;
+            nFacets         3386;
+        }
+        AMI_0
+        {
+            type            empty;
+            nFacets         1226;
+        }
+        AMI_1
+        {
+            type            empty;
+            nFacets         142;
+        }
+        AMI_2
+        {
+            type            empty;
+            nFacets         288;
+        }
+        pump_3
+        {
+            type            empty;
+            nFacets         124;
+        }
+        pump_4
+        {
+            type            empty;
+            nFacets         252;
+        }
+        pump_5
+        {
+            type            empty;
+            nFacets         591;
+        }
+        pump_6
+        {
+            type            empty;
+            nFacets         263;
+        }
+        pump_7
+        {
+            type            empty;
+            nFacets         297;
+        }
+        pump_8
+        {
+            type            empty;
+            nFacets         297;
+        }
+        pump_9
+        {
+            type            empty;
+            nFacets         297;
+        }
+        pump_10
+        {
+            type            empty;
+            nFacets         297;
+        }
+        pump_11
+        {
+            type            empty;
+            nFacets         67;
+        }
+        pump_12
+        {
+            type            empty;
+            nFacets         124;
+        }
+        pump_13
+        {
+            type            empty;
+            nFacets         67;
+        }
+        pump_14
+        {
+            type            empty;
+            nFacets         67;
+        }
+        pump_15
+        {
+            type            empty;
+            nFacets         67;
+        }
+        pump_16
+        {
+            type            empty;
+            nFacets         144;
+        }
+        pump_17
+        {
+            type            empty;
+            nFacets         144;
+        }
+        pump_18
+        {
+            type            empty;
+            nFacets         144;
+        }
+        pump_19
+        {
+            type            empty;
+            nFacets         144;
+        }
+    }
+    pointSubsets
+    {
+    }
+    facetSubsets
+    {
+    }
+    featureEdgeSubsets
+    {
+    }
+}
