@@ -1,0 +1,14 @@
+Lucas: editar de acordo com o passo-a-passo realizado
+
+1) Converter arquivos stl's em formato ascii usando o paraview;
+2) Editar os arquivos slt's e incluir nome para as fronteiras: por exemplo
+substituir solid ascii por solid rotor e solid ami01 e incluir rotor e ami01 após o endsolid no final do arquivo;
+3) Criar um arquivo único com os dois slt's através do comando no terminal: cat rotor.stl ami.slt > geom.slt
+4) Verificar a integridade da superfície através do comando: surfaceCheck geom.stl. O comando ira gerar um relatório na tela e alguns arquivos no diretório do caso. Inspecionar o tamanho da geometria na linha Bounding Box e se a superfície não tem "Surface has no illegal triangles".
+5) Redimensionar o tamanho da superfície, se necessário, usando o comando: surfaceTransformPoints -scale '(0.001 0.001 0.001)' geom.slt geom-t.stl. Verificar as dimensões novamente com o comando surfaceCheck
+6) Deletar o geom.stl anterior e renomear geom-t.stl para geom.slt
+7) Gerar a malha usando o comando cartesianMesh ou script makeMesh
+8) Avaliar a qualidada da malha e verificar se vale a pena utilizar o comando surfaceFeatureEdges (Finds feature edges and corners of a triangulated surface.The angle tells cfMesh that any angle change larger than this - in our case I chose 90 degrees) is a feature edge that must be matched.
+Como usar:
+surfaceFeatureEdges geom.stl geom1.stl -angle 90
+9) Gerar nova malha com o novo stl e comparar com o caso anterior.
